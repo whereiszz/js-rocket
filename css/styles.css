@@ -17,13 +17,35 @@
     top: 0;
 }
 
+.interface {
+    text-align: center;
+    padding: 30px;
+}
+
 a.button{
+    display: inline-block;
+    background-color: rgb(240, 213, 59);
+    padding: 20px 40px;
+    color: tomato;
+    text-decoration: none;
+    border-radius: 40px;
+    font-family: 'Lobster', cursive;
+    transition: background-color 1s;
+    transition: color 1s;
+}
 
+a:hover {
+    background-color: tomato;
+    color: black;
+}
 
+h1 {
+    font-family: 'Lobster', cursive;
+    color: rgb(33, 46, 43);
 }
 
 .ground{
-    background-color: rgb(59, 124, 105);
+    background-color: rgb(36, 99, 80);
     position: absolute;
     width: 100%;
     height: 20px;
@@ -31,15 +53,64 @@ a.button{
     left: 0;
 }
 
+.nervous {
+    background: url(../img/nervous.png) no-repeat 0 0;
+    position: absolute;
+    bottom: 220px;
+    left: 50%;
+    margin-left: -250px;
+    width: 101px;
+    height: 44px;
+    display: none;
+}
+
+.nervous.show {
+    display: block;
+}
+
+.cant-wait {
+    background: url(../img/cant-wait.png) no-repeat 0 0;
+    position: absolute;
+    bottom: 290px;
+    left: 50%;
+    margin-left: 140px;
+    width: 101px;
+    height: 44px;
+    display: none;
+}
+
+.cant-wait.show {
+    display: block;
+}
+
 .rocket{
     position: absolute;
     left: 50%;
-    bottom: 20px;
-    width: 20px;
-    height: 100px;
-    background-color: rgb(235, 213, 90);
+    bottom: 18px;
+    width: 370px;
+    height: 140px;
+    margin-left: -185px;
+    background: url(../img/rocket-stage1.png) no-repeat 0 0;
     transition: bottom 2s;
 }
+
+/* choose rocket image */
+body.body-stage2 .rocket{
+    background-image: url(../img/rocket-stage2.gif);
+}
+body.body-stage3 .rocket,
+body.body-stage4 .rocket{
+    background-image: url(../img/rocket-stage2.gif);
+}
+body.body-stage5 .rocket{
+    background-image: url(../img/boom.png);
+    width: 235px;
+    height: 236px;
+    margin-left: -117.5px;
+    /* bottom: 100px; */
+}
+
+
 
 body.body-stage1 .rocket{
     transition: none;

@@ -3,28 +3,30 @@
 <head>
   <meta charset="utf-8">
   <title>Launch A Rocket</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <script type="text/javascript" src="scripts/rocket.js"></script>
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <body class="body-stage1">
       <div class="left">
-          <div class="stage1">
+          <div class="interface stage1">
               <h1>JS Rocket Launch!</h1>
               <a href="#" class="button" onclick="changeStage(2);">Launch!</a>
           </div>
-          <div class="stage2">
+          <div class="interface stage2">
             <h1 id="countdown">10</h1>
             <a href="#" class="button" onclick="changeStage(1);">Abort!</a>
         </div>
-        <div class="stage3">
+        <div class="interface stage3">
             <h1>Lift Off!</h1>
         </div>
-        <div class="stage4">
+        <div class="interface stage4">
             <h1>Well Done!</h1>
             <a href="#" class="button" onclick="changeStage(1);">Do it again!</a>
         </div>
-        <div class="stage5">
+        <div class="interface stage5">
             <h1>Oh No!!</h1>
             <a href="#" class="button" onclick="changeStage(1);">Try again!</a>
         </div>
@@ -33,7 +35,8 @@
       <div class="right">
           <div class="ground"></div>
           <div class="rocket"></div>
-
+          <div class="nervous" id="nervous"></div>
+          <div class="cant-wait" id="cant-wait"></div>
       </div>
 
      
